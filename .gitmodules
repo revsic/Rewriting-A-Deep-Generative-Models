@@ -1,3 +1,6 @@
 [submodule "stylegan2"]
 	path = stylegan2
 	url = https://github.com/NVlabs/stylegan2
+[submodule "stylegan2-pytorch"]
+	path = stylegan2-pytorch
+	url = https://github.com/rosinality/stylegan2-pytorch
