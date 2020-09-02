@@ -4,9 +4,9 @@ git submodule update --init
 : patch stylegan2-pytorch
 cd stylegan2-pytorch
 : use torch native code instead of cpp_extension
-git am ..\0001-cpp-extension-Use-native-instead-of-cpp.patch
+git am ..\patches\0001-cpp-extension-Use-native-instead-of-cpp.patch
 : fix generate.py 
-git am ..\0001-generate-Fix-indent-and-load_state_dict.patch
+git am ..\patches\0001-generate-Fix-indent-and-load_state_dict.patch
 cd ..
 
 : setting environments
