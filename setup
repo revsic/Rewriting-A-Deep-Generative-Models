@@ -5,3 +5,5 @@ pip install tensorflow-gpu==1.14
 conda install -c anaconda numpy
 conda install -c anaconda pillow
 conda install -c anaconda requests
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+python .\stylegan2-pytorch\convert_weight.py --repo .\stylegan2 .\release\stylegan2-church-config-f.pkl
