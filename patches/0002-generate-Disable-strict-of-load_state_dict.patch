@@ -1,0 +1,25 @@
+From 1c404257fa1321f887105b244c359f74ed35cd6f Mon Sep 17 00:00:00 2001
+From: revsic <revsic99@gmail.com>
+Date: Thu, 3 Sep 2020 01:23:46 +0900
+Subject: [PATCH 2/2] generate: Disable strict of load_state_dict
+
+---
+ generate.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/generate.py b/generate.py
+index 4255c8c..aeddf71 100644
+--- a/generate.py
++++ b/generate.py
+@@ -44,7 +44,7 @@ if __name__ == '__main__':
+     ).to(device)
+     checkpoint = torch.load(args.ckpt)
+ 
+-    g_ema.load_state_dict(checkpoint['g_ema'])
++    g_ema.load_state_dict(checkpoint['g_ema'], strict=False)
+ 
+     if args.truncation < 1:
+         with torch.no_grad():
+-- 
+2.21.0.windows.1
+

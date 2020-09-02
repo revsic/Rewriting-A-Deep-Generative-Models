@@ -1,7 +1,7 @@
-From 1c99e97919ac12e8ac84b50f5c3185bcf67a49ef Mon Sep 17 00:00:00 2001
+From 1d11ceac43342667801adcc42244ab0dbdd7af79 Mon Sep 17 00:00:00 2001
 From: revsic <revsic99@gmail.com>
-Date: Thu, 3 Sep 2020 00:37:46 +0900
-Subject: [PATCH] cpp extension: Use native instead of cpp
+Date: Thu, 3 Sep 2020 01:19:54 +0900
+Subject: [PATCH 1/2] cpp ext: Remove and alter to torch native
 
 ---
  op/fused_act.py | 118 ++++++++++----------
