@@ -16,6 +16,11 @@ pip install tensorflow-gpu==1.14 tqdm
 conda install -c anaconda numpy pillow requests
 conda install -c pytorch pytorch torchvision cudatoolkit=10.1
 
+: download weights
+wget http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-church-config-f.pkl
+mkdir release
+move stylegan2-church-config-f.pkl .\release
+
 : weight conversion
 python .\stylegan2-pytorch\convert_weight.py --repo .\stylegan2 .\release\stylegan2-church-config-f.pkl
 move .\stylegan2-church-config-f.pt .\release
