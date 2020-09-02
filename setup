@@ -1,0 +1,7 @@
+git submodule update --init
+conda create -n tf114 python=3.6
+conda activate tf114
+pip install tensorflow-gpu==1.14
+conda install -c anaconda numpy
+conda install -c anaconda pillow
+conda install -c anaconda requests
