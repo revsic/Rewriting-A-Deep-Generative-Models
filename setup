@@ -1,4 +1,5 @@
 git submodule update --init
+cd stylegan2-pytorch; git am 0001-cpp-extension-Use-native-instead-of-cpp.patch; cd ..
 conda create -n tf114 python=3.6
 conda activate tf114
 pip install tensorflow-gpu==1.14
