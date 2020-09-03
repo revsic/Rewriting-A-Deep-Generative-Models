@@ -44,7 +44,7 @@
 # DEALINGS IN THE SOFTWARE.
 
 import sys
-sys.path.append('../stylegan2-pytorch')
+sys.path.append('./stylegan2-pytorch')
 
 import op
 sys.path.pop()
