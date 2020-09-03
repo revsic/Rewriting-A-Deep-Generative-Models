@@ -7,3 +7,6 @@ sample
 
 # jupyter notebook
 .ipynb_checkpoints
+
+# pycache
+__pycache__
