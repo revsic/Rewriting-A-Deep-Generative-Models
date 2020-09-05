@@ -64,7 +64,7 @@ SOFTWARE.
 
 ---
 
-This respository uses David Bau's Rewriting for referecing the experimentation of weight rewriting.
+This respository uses David Bau's Rewriting for referencing the experimentation of weight rewriting.
 
 MIT LICENSE
 
