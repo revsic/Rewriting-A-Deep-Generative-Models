@@ -6,6 +6,36 @@ Experiments for paper "Rewriting a deep generative models" [[GIT](https://github
 - StyleGAN2 is based on NVIDIA [stylegan2](https://github.com/NVlabs/stylegan2) and rosinality [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch).
 - Each licenses are appended to [3RD-PARTY.md](./3RD-PARTY.md)
 
+## Setup
+
+Reference [setup.bat](./setup.bat)
+
+1. git submodule requires to be initialized.
+```
+git submodule update --init
+```
+
+2. For windows, since torch cpp_extension is failed due to cp949 encodings, patch [0001-cpp-ext-Remove-and-alter-to-torch-native.patch](./patches/0001-cpp-ext-Remove-and-alter-to-torch-native.patch) annotates cpp_extension and use torch apis.
+```
+cd stylegan2-pytorch
+git am --whitespace=fix ..\patches\0001-cpp-ext-Remove-and-alter-to-torch-native.patch 
+```
+
+3. Setting tf1.14 environments. Other requirements can be found on [setup.bat](./setup.bat)
+```
+pip install tensorflow-gpu==1.14
+```
+
+4. Download pretrained weights from [stylegan2](https://github.com/NVlabs/stylegan2).
+
+5. Convert weights for [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch).
+```
+python .\stylegan2-pytorch\convert_weight.py --repo .\stylegan2 .\release\stylegan2-church-config-f.pkl
+move .\stylegan2-church-config-f.pt .\release
+```
+
+
+
 ## Sample - Feature independency
 
 This paper says that some feature maps consist of less dependent features with their neighbors.
